@@ -38,7 +38,10 @@ app = FastAPI(title="Planora API", description="Plan Tomorrow Around You")
 # Allow the Vite dev server (default port 5173) to call this API.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+    "http://localhost:5173",
+    "https://planora-phi-orpin.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
